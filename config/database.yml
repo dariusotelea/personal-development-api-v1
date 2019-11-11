@@ -1,18 +1,21 @@
 default: &default
   adapter: postgresql
+  host: localhost
+  username: personaldevadmin
+  password: personaldevadmin
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
   database: personal-development-v1_development
-  username: personaldevadmin 
+  username: personaldevadmin
   password: personaldevadmin
 
 test:
   <<: *default
   database: personal-development-v1_test
-  username: personaldevadmin 
+  username: personaldevadmin
   password: personaldevadmin
 
 production:
